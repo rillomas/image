@@ -10,7 +10,7 @@ void main() {
 	var halfW = img.width ~/ 2;
 	var halfH = img.height ~/ 2;
 	var avg_normal = new Image(halfW, halfH);
-	var iteration = 1;
+	var iteration = 10;
 	var watch = new Stopwatch()..start();
 	for (int i=0; i<iteration; i++) {
 		average2x2(img, avg_normal);
@@ -50,7 +50,7 @@ void writeImageToPng(Image img, String path) {
 }
 
 /**
- * 2x2 average filter (Image is shrinked to 1/16)
+ * 2x2 average filter (Image is shrinked to 1/4)
  */
 void average2x2(Image input, Image output) {
 	var w = input.width;
