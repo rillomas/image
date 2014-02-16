@@ -301,6 +301,11 @@ class Image {
   }
 
   /**
+   * Get the byte buffer
+   */
+  ByteBuffer get buffer => _data.buffer;
+
+  /**
    * Get the buffer index for the [x], [y] pixel coordinates.
    */
   int index(int x, int y) => y * width + x;
